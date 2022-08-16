@@ -61,13 +61,9 @@ class StreamingService {
   }
 
   addShow(show) {
-    if (!this.shows.includes(show.name)) {
       this.shows.push(show);
       console.log(`Added ${show.name}`);
       this.viewsByShowName[show.name] = show.views;
-    } else {
-      console.log("Show already exist");
-    }
   }
 
   updateViews(show) {
@@ -179,10 +175,15 @@ console.log(netflix.shows);
 
 console.log(JSON.stringify(user.subscriptions, "", 2));
 
-console.log(netflix.getMostViewedShowsOfYear(2016));
+console.log(netflix.getMostViewedShowsOfYear(2022));
 console.log(AmazonPrime.getMostViewedShowsOfGenre("action"));
 console.log(Flash.getDuration());
+console.log(Batman.getDuration())
 
 console.log(netflixSub.getRecommendationTrending());
+console.log(amazonSub.getRecommendationTrending());
+
 
 console.log(netflixSub.getRecommendationByGenre("action"));
+console.log(amazonSub.getRecommendationByGenre("action"));
+
